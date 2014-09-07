@@ -1,0 +1,11 @@
+.plus-minus-b {
+    .horiz {
+       @include transition(all 250ms ease-out);
+    }
+    .open {     
+        .horiz {
+            @include transform(translateX(120px) rotate(90deg));
+            stroke: transparent; 
+        }
+    }
+} 

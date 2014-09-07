@@ -1,0 +1,25 @@
+.to-x {
+    line {
+        transition: all 250ms linear;
+    }
+    
+    line:first-child {
+         @include transform(translateY(0));
+    }
+    
+    line:last-child {
+        @include transform(translateY(0));
+    }
+    
+    .open {     
+        line:nth-child(2) {
+            stroke: transparent;  
+        }
+        line:first-child {
+             @include transform(translateX(16px) rotate(45deg)); 
+        }
+        line:last-child {
+            @include transform(translate(-65px,25px) rotate(-45deg)); 
+        } 
+    }
+} 

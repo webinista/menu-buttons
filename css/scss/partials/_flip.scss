@@ -1,0 +1,13 @@
+.flip { 
+    svg {
+       @include transition(all 250ms linear);
+  
+    }
+    .open { 
+      
+       svg {
+           @include transform( rotateY(-180deg) );
+           @include transform-origin(30% 0);
+       }
+    }
+} 

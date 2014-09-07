@@ -1,0 +1,10 @@
+.plus-minus {
+    .horiz {
+       @include transition(all 250ms ease-out);
+    }
+    .open {     
+        .horiz {
+            stroke: transparent;   
+        }
+    }
+} 

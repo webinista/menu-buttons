@@ -1,0 +1,23 @@
+.to-minus {
+    line {
+        transition: all 250ms linear;
+    }
+    
+    line:first-child,
+    line:last-child {
+        @include transform(translateY(0)); 
+    }
+    
+    .open {     
+        line:nth-child(odd) { 
+            stroke: transparent;
+            transition: all 250ms linear;
+        }      
+        line:first-child {
+            @include transform(translateY(45px));
+        }
+        line:last-child {
+            @include transform(translateY(-45px));
+        }
+    }
+}

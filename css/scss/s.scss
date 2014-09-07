@@ -1,0 +1,57 @@
+@import "partials/bourbon/bourbon";
+
+    
+body {
+    font: 14px / 1.2 sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 90%;
+    margin: auto
+}
+
+.svgwrap {
+    display: block;
+    background: transparent;
+    border: none;
+    height: 30px;
+    margin: 2em auto;
+    padding: 0;
+    width: auto;
+
+    svg {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.button-unit {
+    @include box-sizing(border-box);
+    background: #eee;
+    float:left;
+    height: 25vh;
+    margin: 0 10px 20px;
+    min-height: 165px;
+    min-width: 165px;
+    padding: 1em;
+    width: 25vh;
+    
+    h2 {
+        font-size: 1.2em;
+        margin: 0;
+        text-align: center
+    }
+}
+
+@import "partials/simple";
+@import "partials/tominus";
+@import "partials/tox";
+@import "partials/flip";
+@import "partials/tilt";
+@import "partials/plus-minus";
+@import "partials/plus-minus-b";
+@import "partials/plus-x";
+@import "partials/rotate-arr";
+@import "partials/flip-arr";

@@ -1,0 +1,10 @@
+.plus-x {
+    svg {
+        @include transition(all 250ms ease-in); 
+    }
+    .open {     
+        svg {
+           @include transform(rotate(45deg)); 
+        }   
+    }
+} 
