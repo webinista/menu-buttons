@@ -144,18 +144,18 @@ main {
   -o-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-.plus-minus .horiz {
+.plus-minus .vert {
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;
   transition: all 250ms ease-out; }
-.plus-minus .open .horiz {
+.plus-minus .open .vert {
   stroke: transparent; }
 
-.plus-minus-b .horiz {
+.plus-minus-b .vert {
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;
   transition: all 250ms ease-out; }
-.plus-minus-b .open .horiz {
+.plus-minus-b .open .vert {
   -webkit-transform: translateX(120px) rotate(90deg);
   -moz-transform: translateX(120px) rotate(90deg);
   -ms-transform: translateX(120px) rotate(90deg);
