@@ -64,6 +64,20 @@ main {
   -o-transform: translateY(-45px);
   transform: translateY(-45px); }
 
+.invert .svgwrap {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  transition: all 250ms linear;
+  border: 10px solid transparent; }
+.invert .open {
+  background: #000 !important;
+  border-color: #000; }
+  .invert .open line {
+    stroke: #eee; }
+
 .to-x line {
   transition: all 250ms linear; }
 .to-x line:first-child {
