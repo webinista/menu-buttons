@@ -2,7 +2,7 @@
     svg {
         @include transition(all 250ms ease-in); 
     }
-    .open {     
+    &.open{     
         svg {
            @include transform(rotate(45deg)); 
         }   

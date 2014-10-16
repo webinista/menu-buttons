@@ -2,14 +2,36 @@
 
     
 body {
-    font: 14px / 1.2 sans-serif;
+    font: 14px / 1.2 'Roboto',sans-serif;
     margin: 0;
     padding: 0;
 }
 
-main {
-    width: 90%;
-    margin: auto
+header {
+	background: rgb(26,71,117);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(51, 102, 153)), to(rgb(0, 51, 102)));
+	background-image: -webkit-linear-gradient(top, rgb(51, 102, 153), rgb(0, 51, 102));
+	background-image: -moz-linear-gradient(top, rgb(51, 102, 153), rgb(0, 51, 102));
+	background-image: -o-linear-gradient(top, rgb(51, 102, 153), rgb(0, 51, 102));
+	background-image: -ms-linear-gradient(top, rgb(51, 102, 153), rgb(0, 51, 102));
+	background-image: linear-gradient(top, rgb(51, 102, 153), rgb(0, 51, 102));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#336699', EndColorStr='#003366');
+  color: rgba(255,255,255,.95);
+	margin-bottom: 2em;
+	padding: 1em 1%;
+ 
+	h1 {		
+		font-family: 900;
+		margin: 0 0 .5em;
+	}
+	p {
+			margin: 0 0 .5em;
+	}
+}
+
+header, main, footer {
+		@include box-sizing(border-box);
+		clear:both;
 }
 
 .svgwrap {
@@ -29,22 +51,36 @@ main {
 
 .button-unit {
     @include box-sizing(border-box);
-    background: #eee;
+		background: #eeeeee;
+    border-radius: 5px;
     float:left;
-    height: 25vh;
-    margin: 0 10px 20px;
-    min-height: 165px;
-    min-width: 165px;
+    height: 150px;
+    margin: 0 1% 2%;
+    min-width: 100px;
     padding: 1em;
-    width: 25vh;
+    width: 18%;
     
     h2 {
-        font-size: 1.2em;
-        margin: 0;
-        text-align: center
+    	font-weight: 700;
+      font-size: 1.2em;
+      margin: 0;
+      text-align: center;
+    }
+    button {
+    	cursor: pointer;
+    	width: 30px;
     }
 }
 
+footer{
+	padding: 3em;
+}
+.copyleft{
+	@include transform( rotate(180deg) scale(1.5) );
+	display: inline-block;
+	margin-right: 1em;
+}
+	
 @import "partials/simple";
 @import "partials/tominus";
 @import "partials/invert";
@@ -55,5 +91,7 @@ main {
 @import "partials/plus-minus-b";
 @import "partials/plus-x";
 @import "partials/rotate-arr";
+@import "partials/rotate-arr-b";
 @import "partials/flip-arr";
+@import "partials/glow";
 

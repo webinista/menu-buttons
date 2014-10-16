@@ -11,9 +11,9 @@
         @include transform(translateY(0));
     }
     
-    .open {     
+    &.open{     
         line:nth-child(2) {
-            stroke: transparent;  
+          stroke: transparent;  
         }
         line:first-child {
              @include transform(translateX(16px) rotate(45deg)); 

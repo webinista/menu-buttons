@@ -1,11 +1,31 @@
 body {
-  font: 14px / 1.2 sans-serif;
+  font: 14px / 1.2 'Roboto',sans-serif;
   margin: 0;
   padding: 0; }
 
-main {
-  width: 90%;
-  margin: auto; }
+header {
+  background: #1a4775;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#336699), to(#003366));
+  background-image: -webkit-linear-gradient(top, #336699, #003366);
+  background-image: -moz-linear-gradient(top, #336699, #003366);
+  background-image: -o-linear-gradient(top, #336699, #003366);
+  background-image: -ms-linear-gradient(top, #336699, #003366);
+  background-image: linear-gradient(top, #336699, #003366);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#336699', EndColorStr='#003366');
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2em;
+  padding: 1em 1%; }
+  header h1 {
+    font-family: 900;
+    margin: 0 0 .5em; }
+  header p {
+    margin: 0 0 .5em; }
+
+header, main, footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both; }
 
 .svgwrap {
   display: block;
@@ -23,20 +43,36 @@ main {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eee;
+  background: #eeeeee;
+  border-radius: 5px;
   float: left;
-  height: 25vh;
-  margin: 0 10px 20px;
-  min-height: 165px;
-  min-width: 165px;
+  height: 150px;
+  margin: 0 1% 2%;
+  min-width: 100px;
   padding: 1em;
-  width: 25vh; }
+  width: 18%; }
   .button-unit h2 {
+    font-weight: 700;
     font-size: 1.2em;
     margin: 0;
     text-align: center; }
+  .button-unit button {
+    cursor: pointer;
+    width: 30px; }
 
-.simple .open line {
+footer {
+  padding: 3em; }
+
+.copyleft {
+  -webkit-transform: rotate(180deg) scale(1.5);
+  -moz-transform: rotate(180deg) scale(1.5);
+  -ms-transform: rotate(180deg) scale(1.5);
+  -o-transform: rotate(180deg) scale(1.5);
+  transform: rotate(180deg) scale(1.5);
+  display: inline-block;
+  margin-right: 1em; }
+
+.simple.open line {
   stroke: #c09; }
 
 .to-minus line {
@@ -48,16 +84,16 @@ main {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0); }
-.to-minus .open line:nth-child(odd) {
+.to-minus.open line:nth-child(odd) {
   stroke: transparent;
   transition: all 250ms linear; }
-.to-minus .open line:first-child {
+.to-minus.open line:first-child {
   -webkit-transform: translateY(45px);
   -moz-transform: translateY(45px);
   -ms-transform: translateY(45px);
   -o-transform: translateY(45px);
   transform: translateY(45px); }
-.to-minus .open line:last-child {
+.to-minus.open line:last-child {
   -webkit-transform: translateY(-45px);
   -moz-transform: translateY(-45px);
   -ms-transform: translateY(-45px);
@@ -72,10 +108,10 @@ main {
   -moz-transition: all 250ms linear;
   transition: all 250ms linear;
   border: 10px solid transparent; }
-.invert .open {
+.invert.open {
   background: #000 !important;
   border-color: #000; }
-  .invert .open line {
+  .invert.open line {
     stroke: #eee; }
 
 .to-x line {
@@ -92,15 +128,15 @@ main {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0); }
-.to-x .open line:nth-child(2) {
+.to-x.open line:nth-child(2) {
   stroke: transparent; }
-.to-x .open line:first-child {
+.to-x.open line:first-child {
   -webkit-transform: translateX(16px) rotate(45deg);
   -moz-transform: translateX(16px) rotate(45deg);
   -ms-transform: translateX(16px) rotate(45deg);
   -o-transform: translateX(16px) rotate(45deg);
   transform: translateX(16px) rotate(45deg); }
-.to-x .open line:last-child {
+.to-x.open line:last-child {
   -webkit-transform: translate(-65px, 25px) rotate(-45deg);
   -moz-transform: translate(-65px, 25px) rotate(-45deg);
   -ms-transform: translate(-65px, 25px) rotate(-45deg);
@@ -111,7 +147,7 @@ main {
   -webkit-transition: all 250ms linear;
   -moz-transition: all 250ms linear;
   transition: all 250ms linear; }
-.flip .open svg {
+.flip.open svg {
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
@@ -137,7 +173,7 @@ main {
   -ms-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
   transform-origin: 50% 50%; }
-.tilt .open .arrow {
+.tilt.open .arrow {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -148,14 +184,14 @@ main {
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;
   transition: all 250ms ease-out; }
-.plus-minus .open .vert {
+.plus-minus.open .vert {
   stroke: transparent; }
 
 .plus-minus-b .vert {
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;
   transition: all 250ms ease-out; }
-.plus-minus-b .open .vert {
+.plus-minus-b.open .vert {
   -webkit-transform: translateX(120px) rotate(90deg);
   -moz-transform: translateX(120px) rotate(90deg);
   -ms-transform: translateX(120px) rotate(90deg);
@@ -167,29 +203,25 @@ main {
   -webkit-transition: all 250ms ease-in;
   -moz-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
-.plus-x .open svg {
+.plus-x.open svg {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-.rotate-arrow button {
-  width: 30px; }
 .rotate-arrow svg {
   -webkit-transition: all 250ms ease-in;
   -moz-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
-.rotate-arrow .open svg {
+.rotate-arrow.open svg {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-.rotate-arrow-2 button {
-  width: 30px; }
-.rotate-arrow-2 svg {
+.rotate-arrow-b svg {
   -webkit-transition: all 250ms ease-in;
   -moz-transition: all 250ms ease-in;
   transition: all 250ms ease-in;
@@ -198,20 +230,18 @@ main {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg); }
-.rotate-arrow-2 .open svg {
+.rotate-arrow-b.open svg {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg); }
 
-.flip-arrow-h button {
-  width: 30px; }
 .flip-arrow-h svg {
   -webkit-transition: all 250ms ease-in;
   -moz-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
-.flip-arrow-h .open svg {
+.flip-arrow-h.open svg {
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
@@ -222,7 +252,7 @@ main {
   -webkit-transition: all 250ms ease-in;
   -moz-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
-.flip-arrow-v .open svg {
+.flip-arrow-v.open svg {
   -webkit-transform: rotateX(-0.5turn);
   -moz-transform: rotateX(-0.5turn);
   -ms-transform: rotateX(-0.5turn);

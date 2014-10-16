@@ -1,29 +1,22 @@
 .flip-arrow-h {
-    button {
-        width: 30px;   
-    }
-    svg {
-        @include transition(all 250ms ease-in); 
-    }
-    .open {     
-        svg {
-           @include transform(rotateY(-180deg)); 
-           
-        }   
-    }
+	svg {
+			@include transition(all 250ms ease-in); 
+	}
+	&.open{     
+		svg {
+			 @include transform(rotateY(-180deg));           
+		}   
+	}
 } 
 
-.flip-arrow-v {
-   
-    svg {
-        @include transition(all 250ms ease-in);
-    }
-    .open {     
-        svg {
-           @include transform(rotateX(-.5turn)); 
-           
-           
-        }   
-    }
+.flip-arrow-v {   
+	svg {
+			@include transition(all 250ms ease-in);
+	}
+	&.open{     
+		svg {
+			 @include transform(rotateX(-.5turn)); 
+		 }   
+	}
 } 
 

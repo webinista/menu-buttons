@@ -1,29 +1,10 @@
 .rotate-arrow {
-    button {
-        width: 30px;   
-    }
     svg {
         @include transition(all 250ms ease-in); 
     }
-    .open {     
+    &.open{     
         svg {
            @include transform(rotate(90deg)); 
-        }   
-    }
-} 
-
-.rotate-arrow-2 {
-    button {
-        width: 30px;   
-    }
-    svg {
-        @include transition(all 250ms ease-in);
-        @include transform(rotate(90deg));
-    }
-    .open {     
-        svg {
-           @include transform(rotate(-90deg)); 
-           
         }   
     }
 } 

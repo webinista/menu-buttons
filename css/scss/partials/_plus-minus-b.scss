@@ -2,7 +2,7 @@
     .vert {
        @include transition(all 250ms ease-out);
     }
-    .open {     
+    &.open{     
         .vert {
             @include transform(translateX(120px) rotate(90deg));
             stroke: transparent; 

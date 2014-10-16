@@ -2,7 +2,7 @@
     .vert {
        @include transition(all 250ms ease-out);
     }
-    .open {     
+    &.open{     
         .vert {
             stroke: transparent;   
         }
