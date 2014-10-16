@@ -1,9 +1,14 @@
 .plus-minus-b {
-    .vert {
+    .horiz {
        @include transition(all 250ms ease-out);
     }
+<<<<<<< HEAD
     &.open{     
         .vert {
+=======
+    .open {     
+        .horiz {
+>>>>>>> parent of deef857... Changing some + - stuff.
             @include transform(translateX(120px) rotate(90deg));
             stroke: transparent; 
         }
