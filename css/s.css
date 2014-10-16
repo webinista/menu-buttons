@@ -61,7 +61,8 @@ header, main, footer {
     margin: 0;
     text-align: center; }
   .button-unit button {
-    cursor: pointer; }
+    cursor: pointer;
+    max-width: 40px; }
 
 footer {
   padding: 3em; }
