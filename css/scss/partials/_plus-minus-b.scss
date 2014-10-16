@@ -2,18 +2,9 @@
     .horiz {
        @include transition(all 250ms ease-out);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    &.open{     
-        .vert {
-=======
-    .open {     
+
+    &.open {     
         .horiz {
->>>>>>> parent of deef857... Changing some + - stuff.
-=======
-    .open {     
-        .horiz {
->>>>>>> parent of deef857... Changing some + - stuff.
             @include transform(translateX(120px) rotate(90deg));
             stroke: transparent; 
         }

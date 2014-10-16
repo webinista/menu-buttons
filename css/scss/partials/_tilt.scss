@@ -1,12 +1,16 @@
+/* Still buggy in most browsers. In progress */
+
 .tilt { 
-    .arrow {
-        @include transition(all 250ms linear);
-        @include transform( rotate(0deg) );
-        @include transform-origin(50% 50%);
-    }
+
+        path {
+        	@include transition(all 250ms linear);
+       	  @include transform( rotate(10deg) );
+       	  @include transform-origin( 0 0% );
+       	}
+    
     &.open{     
-       .arrow {
-           @include transform( rotate(90deg) );
-       }
+          path {
+          	// @include transform( rotate(10deg) );   
+          } 		
     }
 } 
