@@ -1,10 +1,10 @@
 .invert {
-    .svgwrap {
+    &.svgwrap {
         @include box-sizing(content-box);
         @include transition(all 250ms linear);
         border: 10px solid transparent;  
     }
-    .open {
+    &.open {
         background: #000 !important;
         border-color: #000; 
         

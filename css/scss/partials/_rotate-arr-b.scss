@@ -1,0 +1,12 @@
+.rotate-arrow-b {
+    svg {
+        @include transition(all 250ms ease-in);
+        @include transform(rotate(90deg));
+    }
+    &.open{     
+        svg {
+           @include transform(rotate(-90deg)); 
+           
+        }   
+    }
+} 

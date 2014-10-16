@@ -1,9 +1,10 @@
 .plus-minus-b {
-    .vert {
+    .horiz {
        @include transition(all 250ms ease-out);
     }
-    .open {     
-        .vert {
+
+    &.open {     
+        .horiz {
             @include transform(translateX(120px) rotate(90deg));
             stroke: transparent; 
         }
