@@ -5,6 +5,7 @@
 
     &.open {     
         .horiz {
+        	  @include transition(all 250ms ease-out);
             @include transform(translateX(120px) rotate(90deg));
             stroke: transparent; 
         }

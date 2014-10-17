@@ -1,5 +1,33 @@
+dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: solid;
+  padding: 1em;
+  background: white;
+  color: black;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  display: none; }
+
+dialog[open] {
+  display: block; }
+
+.backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
 body {
-  font: 14px / 1.2 'Roboto',sans-serif;
+  font: 14px / 1.5 'Roboto',sans-serif;
   margin: 0;
   padding: 0; }
 
@@ -14,7 +42,7 @@ header {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#336699', EndColorStr='#003366');
   color: rgba(255, 255, 255, 0.95);
   margin-bottom: 2em;
-  padding: 1em 1%; }
+  padding: 2em 1em 1em; }
   header h1 {
     font-family: 900;
     margin: 0 0 .5em; }
@@ -26,21 +54,6 @@ header, main, footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   clear: both; }
-
-.svgwrap {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  background: transparent;
-  border: none;
-  height: 30px;
-  margin: 2em auto;
-  padding: 0;
-  width: auto; }
-  .svgwrap svg {
-    width: auto;
-    height: 100%; }
 
 .button-unit {
   -webkit-box-sizing: border-box;
@@ -60,12 +73,9 @@ header, main, footer {
     font-size: 1.2em;
     margin: 0;
     text-align: center; }
-  .button-unit button {
-    cursor: pointer;
-    max-width: 40px; }
 
 footer {
-  padding: 3em; }
+  padding: 3em 1em 1em; }
 
 .copyleft {
   -webkit-transform: rotate(180deg) scale(1.5);
@@ -76,6 +86,71 @@ footer {
   display: inline-block;
   margin-right: 1em; }
 
+[data-triggers="dialog"] {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline; }
+  [data-triggers="dialog"]:hover {
+    color: #c09; }
+
+dialog {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  border: none;
+  box-shadow: 0 0 10px 0 #000;
+  height: 50%;
+  overflow: scroll;
+  padding: 2em; }
+  dialog[open] {
+    display: block; }
+  dialog .close {
+    background: #d00;
+    border: none;
+    color: #fff;
+    font: inherit;
+    position: absolute;
+    right: 1em;
+    top: 1em; }
+    dialog .close:hover {
+      background: #f10; }
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.7); }
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8); }
+
+button {
+  cursor: pointer; }
+  button:focus {
+    outline-color: #39f; }
+
+/* Dependency for all buttons */
+.menu-trigger {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  background: transparent;
+  border: none;
+  height: 35px;
+  margin: 2em auto;
+  max-width: 50%;
+  padding: 0; }
+  .menu-trigger svg {
+    width: auto;
+    height: 100%; }
+
+/* Individual button partials */
 .simple.open line {
   stroke: #c09; }
 
@@ -104,7 +179,7 @@ footer {
   -o-transform: translateY(-45px);
   transform: translateY(-45px); }
 
-.invert.svgwrap {
+.invert.menu-trigger {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -157,11 +232,11 @@ footer {
   -ms-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  -webkit-transform-origin: 30% 0;
-  -moz-transform-origin: 30% 0;
-  -ms-transform-origin: 30% 0;
-  -o-transform-origin: 30% 0;
-  transform-origin: 30% 0; }
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  transform-origin: 50% 0; }
 
 /* Still buggy in most browsers. In progress */
 .tilt path {
@@ -191,6 +266,9 @@ footer {
   -moz-transition: all 250ms ease-out;
   transition: all 250ms ease-out; }
 .plus-minus-b.open .horiz {
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
   -webkit-transform: translateX(120px) rotate(90deg);
   -moz-transform: translateX(120px) rotate(90deg);
   -ms-transform: translateX(120px) rotate(90deg);
