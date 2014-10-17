@@ -1,5 +1,5 @@
 .invert {
-    &.svgwrap {
+    &.menu-trigger {
         @include box-sizing(content-box);
         @include transition(all 250ms linear);
         border: 10px solid transparent;  

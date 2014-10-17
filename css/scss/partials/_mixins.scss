@@ -1,5 +1,0 @@
-@mixin transform($transform) {
-	-webkit-transform: $transform; /* Because Safari ain't on the no-prefix train. */
-	    -ms-transform: $transform;
-	        transform: $transform;
-}

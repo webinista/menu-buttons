@@ -5,7 +5,7 @@
     &.open{     
        svg {
            @include transform( rotateY(-180deg) );
-           @include transform-origin(30% 0);
+           @include transform-origin(50% 0);
        }
     }
 } 
