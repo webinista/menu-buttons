@@ -39,13 +39,15 @@ header, main, footer {
     border-radius: 5px;
     display:table-cell;
     float:left;
-    height: 200px;
+    max-height: 200px;
+    min-height: 180px;
     margin: 2vh 1vw;
     min-width: 100px;
     padding: 1em;
     position: relative;
     width: 18%;
-    
+    width: 18vw;
+
     h2 {
 		font-weight: 700;
 		font-size: 1.2em;
