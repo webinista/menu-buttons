@@ -25,32 +25,55 @@ header {
 		margin: 0 0 .5em;
 	}
 	p {
-			margin: 0 0 .5em;
+		margin: 0 0 .5em;
 	}
 }
 
 header, main, footer {
-		@include box-sizing(border-box);
-		clear:both;
+	@include box-sizing(border-box);
+	clear:both;
 }
 .button-unit {
     @include box-sizing(border-box);
-		background: #eeeeee;
+	background: #eeeeee;
     border-radius: 5px;
     display:table-cell;
     float:left;
-    height: 150px;
-    margin: 0 1% 2%;
+    height: 200px;
+    margin: 2vh 1vw;
     min-width: 100px;
     padding: 1em;
+    position: relative;
     width: 18%;
     
     h2 {
-    	font-weight: 700;
-      font-size: 1.2em;
-      margin: 0;
-      text-align: center;
+		font-weight: 700;
+		font-size: 1.2em;
+		margin: 0;
+		text-align: center;
     }
+    a {
+    	color: #33f;
+
+    	&:visited {
+    		color: #009;
+    	}
+    	&:hover {
+    		color: #c09;
+    	}
+    }
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.src {
+	position: absolute;
+	bottom: 0;
+	margin: 1em;
 }
 
 @media screen and (max-width: 555px) {
@@ -136,7 +159,7 @@ button {
 
 /* Dependency for all buttons */
 .menu-trigger {
-		@include box-sizing(border-box);
+	@include box-sizing(border-box);
     display: block;
     background: transparent;
     border: none;
@@ -175,4 +198,5 @@ button {
 @import "partials/rotate-arr-b";
 @import "partials/flip-arr";
 @import "partials/glow";
+@import "partials/slider";
 

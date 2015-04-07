@@ -12,10 +12,11 @@
 <body>
 	<header>
 		<h1>Menu Buttons</h1>
-		<p>A collection of interactions for menu buttons. Some are original. Most are based on interactions from other places on the web. <button type="button" data-triggers="dialog">More</button></p>
+		<p>A collection of interactions for menu buttons. Some are original. Most are based on interactions found in other places on the web. <button type="button" data-triggers="dialog">More</button></p>
 	</header>
 
     <main>
+        <div class="flex">
          <section class="button-unit">
             <h2>Simple</h2>
             <button type="button" class="menu-trigger simple">          
@@ -89,7 +90,7 @@
                     </g>
                 </svg>
              </button>
-             <p><a href="http://qz.com/">As seen on Quartz</a></p>
+             <p class="src"><a href="http://qz.com/">As seen on Quartz</a></p>
          </section> 
        
         <section class="button-unit">
@@ -180,8 +181,15 @@
                 </svg>
              </button>
          </section> 
-    
-       
+
+         <section class="button-unit">
+            <h2>Slider</h2>
+            <button type="button" class="menu-trigger slider">          
+                <b>Menu</b>
+            </button>
+            <p class="src"><a href="http://responsivewebdesign.com/">Seen on Responsive Web Design</a></p>
+         </section> 
+        </div>      
     </main>
 	<footer>
 		<p><span class="copyleft" title="Copyleft">&copy;</span> 2014. Do what you wish with it. Credit appreciated, but not necessary. By <a href="http://webinista.com/">Webinista</a>.</p>
@@ -192,6 +200,10 @@
   	<p>Simply put, it&#8217;s a collection of menu buttons developed with HTML, SVG, and CSS. You can use them as is, or (better yet) adapt them to your own project.</p>
   	
   	<p>One thing to note: Internet Explorer (versions &#8804; 11) does not support transitions on SVG elements in the HTML DOM. In many of those cases, you can replace these shapes with <code>div</code> elements instead.</p>
+
+    <p>Another thing to note: because these are demos, and not actual links to menus, I'm using 
+    <code>button</code> elements. Semantically-speaking, <code>a</code> elements with an internal <code>href</code> value (e.g. <code>&lt;a href="#menu"&gt;</code>) may be more appropriate.
+    </p>
   	
   	
   </dialog>

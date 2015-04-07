@@ -1,0 +1,53 @@
+  .slider{
+      background: #000;
+      border-radius: 1000px;
+      overflow:hidden;
+      padding: 0;
+      position: relative;
+      width: 50px;
+      height: 50px;
+
+      max-width: 50px;
+      max-height: 50px;
+      
+
+
+      &::before,
+      &::after{
+        @include transition(all 500ms);
+        content: ' ';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-size: 100% auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      &::before {
+        background: transparent url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20135.3%20115.3%22%20enable-background%3D%22new%200%200%20135.3%20115.3%22%3E%3Ctitle%3EMenu%3C%2Ftitle%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23eeeeee%22%20stroke-width%3D%2220%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M0%209.8h135.1M0%2057.8h135.1M0%20105.8h135.1%22%2F%3E%3C%2Fsvg%3E) center no-repeat;   
+      }
+
+      &::after{
+        @include transform(translateY(-80px));
+        background: transparent url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20300%22%20enable-background%3D%22new%200%200%20300%20300%22%3E%3Cpath%20fill%3D%22%23eee%22%20d%3D%22M45.5%203L149%20107.3%20253.2%203l41.9%2043.5L191.6%20150%20295%20254.3%20253.1%20297%20149%20191.8%2044.7%20296.9%202%20255l105.1-105.9L3.6%2046.5%2045.5%203z%22%2F%3E%3C%2Fsvg%3E) center no-repeat;
+      }
+
+      &.open{
+        &::after{
+          @include transform(none);
+        }
+        &::before {
+          @include transform(translateY(80px));
+        }
+      }
+
+      b {
+        @include transform(translateX(-80px));
+        display: inline-block;
+      }
+  }
