@@ -16,7 +16,7 @@ header {
 	background-image: -ms-linear-gradient(top, rgb(51, 102, 153), rgb(0, 51, 102));
 	background-image: linear-gradient(top, rgb(51, 102, 153), rgb(0, 51, 102));
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#336699', EndColorStr='#003366');
-  color: rgba(255,255,255,.95);
+  	color: rgba(255,255,255,.95);
 	margin-bottom: 2em;
 	padding: 2em 1em 1em;
  
@@ -148,6 +148,16 @@ button {
     svg {
         width: auto;
         height: 100%;
+    }
+
+    a {
+    	color: #06f;
+    }
+    a:visited{
+    	color: #009;
+    }
+    a:hover {
+    	color: #c09;
     }
 }
 
